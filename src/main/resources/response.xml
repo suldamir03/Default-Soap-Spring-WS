@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getUserResponse xmlns:ns2="http://sdr.com/spring-soap-example">
+            <ns2:user>
+                <ns2:name>Damir</ns2:name>
+                <ns2:empId>1</ns2:empId>
+                <ns2:salary>325.5</ns2:salary>
+            </ns2:user>
+        </ns2:getUserResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
