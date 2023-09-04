@@ -28,7 +28,7 @@ public class SoapWebConfig {
         return new SimpleXsdSchema(new ClassPathResource("user.xsd"));
     }
 
-    @Bean
+    @Bean(name = "users")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema userSchema) {
 
         DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
