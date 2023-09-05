@@ -1,4 +1,4 @@
-package ru.suleimenov.defaultsoapspringws.entity;
+package ru.suleimenov.defaultsoapspringws.db.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

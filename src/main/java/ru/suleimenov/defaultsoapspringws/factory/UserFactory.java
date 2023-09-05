@@ -2,7 +2,7 @@ package ru.suleimenov.defaultsoapspringws.factory;
 
 import generated.User;
 import org.springframework.stereotype.Component;
-import ru.suleimenov.defaultsoapspringws.entity.UserEntity;
+import ru.suleimenov.defaultsoapspringws.db.entity.UserEntity;
 
 @Component
 public class UserFactory {

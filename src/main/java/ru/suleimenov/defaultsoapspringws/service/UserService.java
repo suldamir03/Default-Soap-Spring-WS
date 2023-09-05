@@ -5,7 +5,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import generated.User;
-import ru.suleimenov.defaultsoapspringws.entity.UserEntity;
+import ru.suleimenov.defaultsoapspringws.db.repo.UserRepository;
+import ru.suleimenov.defaultsoapspringws.db.entity.UserEntity;
 import ru.suleimenov.defaultsoapspringws.factory.UserFactory;
 
 import java.util.Optional;

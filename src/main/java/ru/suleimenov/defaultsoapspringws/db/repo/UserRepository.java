@@ -1,8 +1,8 @@
-package ru.suleimenov.defaultsoapspringws.service;
+package ru.suleimenov.defaultsoapspringws.db.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.suleimenov.defaultsoapspringws.entity.UserEntity;
+import ru.suleimenov.defaultsoapspringws.db.entity.UserEntity;
 
 import java.util.Optional;
 
