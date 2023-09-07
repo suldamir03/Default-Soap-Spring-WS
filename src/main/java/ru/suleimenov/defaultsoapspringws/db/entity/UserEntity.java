@@ -1,9 +1,9 @@
 package ru.suleimenov.defaultsoapspringws.db.entity;
 
+import javax.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
 
 @Entity
 @Getter
