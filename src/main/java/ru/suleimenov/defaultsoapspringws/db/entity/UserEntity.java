@@ -1,6 +1,6 @@
 package ru.suleimenov.defaultsoapspringws.db.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

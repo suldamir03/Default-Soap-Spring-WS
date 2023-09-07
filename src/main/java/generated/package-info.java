@@ -5,5 +5,5 @@
 // Generated on: 2023.09.02 at 03:04:14 PM ALMT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://sdr.com/spring-soap-example", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://sdr.com/spring-soap-example", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package generated;
