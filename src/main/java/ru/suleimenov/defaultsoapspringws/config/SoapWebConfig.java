@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
-import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
+import org.springframework.ws.wsdl.wsdl11.SimpleWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
@@ -16,11 +16,11 @@ import org.springframework.xml.xsd.XsdSchema;
 public class SoapWebConfig {
 
     @Bean
-    public ServletRegistrationBean messageDispatcherServlet(ApplicationContext context) {
+    public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext context) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(context);
         servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(servlet, "/ws/*");
+        return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
     @Bean
@@ -29,13 +29,9 @@ public class SoapWebConfig {
     }
 
     @Bean(name = "users")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema userSchema) {
-
-        DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
-        definition.setSchema(userSchema);
-        definition.setLocationUri("/ws");
-        definition.setPortTypeName("UserServicePort");
-        definition.setTargetNamespace("http://sdr.com/spring-soap-example");
+    public SimpleWsdl11Definition defaultWsdl11Definition() {
+        SimpleWsdl11Definition definition = new SimpleWsdl11Definition();
+        definition.setWsdl(new ClassPathResource("users.wsdl"));
         return definition;
     }
 }

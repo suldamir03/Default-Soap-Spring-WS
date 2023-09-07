@@ -16,10 +16,10 @@ import ru.suleimenov.defaultsoapspringws.service.UserService;
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserEndpoint {
-
+    private final static String NAMESPACE_URI = "http://sdr.com/spring-soap-example";
     UserService userService;
 
-    @PayloadRoot(namespace = "http://sdr.com/spring-soap-example",
+    @PayloadRoot(namespace = NAMESPACE_URI,
             localPart = "getUserRequest")
     @ResponsePayload
     public GetUserResponse getUserRequest(@RequestPayload GetUserRequest request) {
